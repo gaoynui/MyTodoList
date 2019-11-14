@@ -1,0 +1,2 @@
+路径：
+/home/gaoyang/frontend/dist
