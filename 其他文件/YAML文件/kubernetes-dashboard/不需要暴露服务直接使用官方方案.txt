@@ -1,0 +1,1 @@
+https://v1-13.docs.kubernetes.io/zh/docs/tasks/access-application-cluster/web-ui-dashboard/
