@@ -1,0 +1,2 @@
+在CorsConfig.java中修改源：
+corsConfiguration.addAllowedOrigin("http://my.todolists.com")
