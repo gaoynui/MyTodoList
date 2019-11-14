@@ -1,0 +1,4 @@
+## dist 打包好的前端
+## myTodoLists-0.0.4-SNAPSHOT.jar 打包好的后端
+## Dockerfile 使用Docker将jar包打包
+docker build -t gaoynui/[repository]:[tag] .
