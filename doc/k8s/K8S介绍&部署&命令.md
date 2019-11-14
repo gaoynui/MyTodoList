@@ -84,7 +84,7 @@ pod是可以创建和管理K8s计算的最小可部署单元。一个Pod代表�
 
 每个Pod都会被分配唯一一个IP地址。
 
-<img src="https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/pod%E5%86%85%E9%83%A8.png?raw=true" alt="pod内部" style="zoom:50%;" />
+<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/pod%E5%86%85%E9%83%A8.png?raw=true" alt="pod内部" style="zoom:50%;" />
 
 每个pod都有一个特殊的被称为根容器的pause容器(initContainer)，pause容器对应的镜像数据K8S平台的一部分。
 
