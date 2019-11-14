@@ -18,6 +18,7 @@
 * 版本管理工具 Git
 K8S：
 * Kubeadm v1.16.2
+* Docker v18.09.5
 ```
 
 作者：GY  
