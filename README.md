@@ -60,9 +60,29 @@ C:\Windows\System32\drivers\etc
 ```
 http://my.todolists.com/index.html
 ```
+### 本地使用 需修改前后端源码的URL接口和配置数据库
+* 数据库：  
+net start mysql  
+database port 3306  
+database name: springdemo  
+database user: root  
+database password: 123qwe  
+* 后端backend：  
+通过IDEA打开直接运行项目  
+或者  
+```
+java -jar backend/target/myTodolists-0.0.X-SNAPSHOT.jar
+```
+* 前端frontend：  
+项目目录下命令行：  
+```
+npm install
+npm run dev
+```
+前端访问localhost:8080,后端端口为localhost:8888
 ## 截图
 后端运行成功：  
-![后端运行成功]()  
+![]()  
 前端登录界面：  
 ![]()  
 前端页面：    
