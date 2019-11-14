@@ -82,10 +82,10 @@ npm run dev
 前端访问localhost:8080,后端端口为localhost:8888
 ## 截图
 后端运行成功：  
-![]()  
+![后端运行](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/%E5%90%8E%E7%AB%AF%E8%BF%90%E8%A1%8C.png?raw=true)  
 前端登录界面：  
-![]()  
+![前端登录界面](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/%E5%89%8D%E7%AB%AFdemo1.png?raw=true)  
 前端页面：    
-![]()  
+![前端页面](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/%E5%89%8D%E7%AB%AFdemo2.png?raw=true)  
 整体部署：  
-![]()  
+![k8s整体部署](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/k8s%E4%B8%8A%E6%95%B4%E4%B8%AA%E9%83%A8%E7%BD%B2%E6%83%85%E5%86%B5.png?raw=true)  
