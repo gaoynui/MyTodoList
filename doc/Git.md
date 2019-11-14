@@ -22,7 +22,7 @@ git服务器，用于在云端存放项目代码，进行备份。
 
 上述的关系如下：
 
-![git仓库管理流程](https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/git%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B.jpg?raw=true)
+![git仓库管理流程](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/git%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B.jpg?raw=true)
 
 ## git安装
 
