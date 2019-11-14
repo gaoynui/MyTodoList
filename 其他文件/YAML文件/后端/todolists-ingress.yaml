@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: svc-ingress
+  namespace: gy
+  labels:
+    app: todolists
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: gy.todolists.com
+    http:
+      paths:
+      - path:				
+        backend:		
+          serviceName: todolists-svc
+          servicePort: 8888			
+

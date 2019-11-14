@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  namespace: gy
+  labels:
+    app: gy-mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gy-mysql
+  template:
+    metadata:
+      labels:
+        app: gy-mysql
+    spec:
+      containers:
+      - env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "123qwe"
+        image: daocloud.io/library/mysql:8.0
+        imagePullPolicy: IfNotPresent
+        name: mysql-deployment
+        ports:
+        - containerPort: 3306
+          name: http
+        volumeMounts:
+        - name: mysql-pv
+          mountPath: "var/lib/mysql"
+          readOnly: false
+          subPath: gy-mysql
+      volumes:
+      - name: mysql-pv
+        nfs:
+          server: 10.120.16.139
+          path: "/home/gaoyang/share_folder"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-svc
+  namespace: gy
+  labels:
+    expose: "true"
+spec:
+  ports:
+  - port: 3306
+    targetPort: 3306
+  selector:
+    app: gy-mysql

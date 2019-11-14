@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mytodolists
+  namespace: gy
+  labels:
+    app: todolists
+  annotations:
+    zhushi: My Todo Lists
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todolists
+  template:
+    metadata:
+      labels:
+        app: todolists
+    spec:
+      containers:
+      - command:
+        - java
+        - -jar
+        - /temp/myTodoLists-0.0.4-SNAPSHOT.jar
+        env:
+        - name: MYSQL_HOST
+          value: mysql-svc.gy
+        - name: MYSQL_ROOT_PASSWORD
+          value: 123qwe
+        image: java:8-jdk
+        imagePullPolicy: IfNotPresent
+        name: todolists
+        ports:
+        - containerPort: 8888
+        volumeMounts:
+        - mountPath: /temp
+          name: jar-volume
+      initContainers:
+      - command:
+        - cp
+        - /myTodoLists-0.0.4-SNAPSHOT.jar
+        - /app/myTodoLists-0.0.4-SNAPSHOT.jar
+        image: gaoynui/mytodolists:v1.0.4
+        imagePullPolicy: Always
+        name: todolists-jar
+        volumeMounts:
+        - mountPath: /app
+          name: jar-volume
+      volumes:
+      - emptyDir: {}
+        name: jar-volume
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: todolists-svc
+  namespace: gy
+  labels:
+    app: todolists
+spec:
+#  ports:
+#    - protocol: TCP
+#      port: 8888			
+#      targetPort: 8888
+  type: NodePort
+  ports:
+    - port: 8888
+      nodePort: 30000
+  selector:
+    app: todolists
