@@ -130,7 +130,7 @@ ex:
 mysql>select * from springdemo.user;
 ```
 
-<img src="https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png?raw=true" alt="用户信息" style="zoom: 67%;" />
+<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png?raw=true" alt="用户信息" style="zoom: 67%;" />
 
 10.mysqlworkbench GUI管理数据库
 
@@ -138,7 +138,7 @@ mysql>select * from springdemo.user;
 
 安装完成打开即可连接可用的数据库服务：
 
-![mysqlworkbench](https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/mysqlworkbench.png?raw=true)
+![mysqlworkbench](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/mysqlworkbench.png?raw=true)
 
 ## mongodb
 
@@ -160,13 +160,13 @@ file->connect->输入服务器信息
 
 connect:
 
-<img src="https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/connectMongodb.png?raw=true" alt="connectMongodb" style="zoom: 67%;" />
+<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/connectMongodb.png?raw=true" alt="connectMongodb" style="zoom: 67%;" />
 
 create document and insert:
 
-<img src="https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/useMongodb.png?raw=true" alt="useMongodb" style="zoom:67%;" />
+<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/useMongodb.png?raw=true" alt="useMongodb" style="zoom:67%;" />
 
 数据插入成功：
 
-<img src="https://github.com/gaoynui/MyTodoLists/blob/master/doc/pics/NoSqlBooster%E7%AE%A1%E7%90%86mongo%E6%95%B0%E6%8D%AE%E5%BA%93.png?raw=true" alt="NoSqlBooster管理mongo数据库" style="zoom:67%;" />
+<img src="https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/NoSqlBooster%E7%AE%A1%E7%90%86mongo%E6%95%B0%E6%8D%AE%E5%BA%93.png?raw=true" alt="NoSqlBooster管理mongo数据库" style="zoom:67%;" />
 
