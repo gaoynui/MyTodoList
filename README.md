@@ -90,3 +90,18 @@ npm run dev
 ![前端页面](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/%E5%89%8D%E7%AB%AFdemo2.png?raw=true)  
 整体部署：  
 ![k8s整体部署](https://github.com/gaoynui/MyTodoList/blob/master/doc/pics/k8s%E4%B8%8A%E6%95%B4%E4%B8%AA%E9%83%A8%E7%BD%B2%E6%83%85%E5%86%B5.png?raw=true)  
+## 相关参考
+[Spring Boot demo](https://github.com/BekeyChao/spring-vue-demo)  
+[Element 组件](https://cloud.tencent.com/developer/section/1489885)  
+[axios与后端通信](https://blog.csdn.net/star_zone/article/details/82784086)  
+[单文件组件](https://cn.vuejs.org/v2/guide/single-file-components.html)  
+[单文件组件demo](https://codesandbox.io/s/simple-todo-app-with-vue-29xqm)  
+[JDBC使用](https://www.runoob.com/w3cnote/jdbc-use-guide.html)  
+[K8S命令表](http://docs.kubernetes.org.cn/683.html)  
+[K8S架构](https://www.kubernetes.org.cn/kubernetes%e8%ae%be%e8%ae%a1%e6%9e%b6%e6%9e%84)  
+[使用Dockerfile定制镜像](https://yeasy.gitbooks.io/docker_practice/image/build.html)  
+[K8S In Action](https://livebook.manning.com/book/kubernetes-in-action/chapter-1/)  
+[安装kubeadm](https://zhuanlan.zhihu.com/p/46341911)  
+[kubernetes-dashboard版本](https://github.com/kubernetes/dashboard/releases?after=v1.8.1)  
+[自定义dashboard](https://blog.csdn.net/networken/article/details/85607593)  
+[nginx中location规则](https://segmentfault.com/a/1190000013267839)
