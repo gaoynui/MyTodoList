@@ -1,0 +1,92 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: front-nginx-depl
+  namespace: gy
+  labels:
+    app: front-nginx-depl
+spec:
+  selector:
+    matchLabels:
+      app: front-nginx-depl
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: front-nginx-depl
+    spec:
+      containers:
+      - image: nginx
+        name: front-nginx-depl
+        ports:
+        - containerPort: 80
+          name: front-port
+        volumeMounts:
+        - name: nginx-front
+          mountPath: /etc/nginx/front
+        - name: nginx-conf
+          mountPath: /etc/nginx/conf.d
+      volumes:
+      - name: nginx-front
+        hostPath:
+           path: /home/gaoyang/front/dist
+           type: Directory
+      - name: nginx-conf
+        hostPath:
+           path: /home/gaoyang/front/conf
+           type: Directory
+---
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+  # name: front-service
+  # namespace: gy
+# spec:
+  # selector:
+    # app: front-nginx-depl
+  # ports:
+    # - port: 80
+      # targetPort: 80
+
+# ---
+
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+  # name: front-service-ing
+  # namespace: gy
+  # annotations:
+    # kubernetes.io/ingress.class: nginx
+    # nginx.ingress.kubernetes.io/server-snippet: |
+      # location ~* ^/.*\.html {
+       # root /etc/nginx/front/;
+      # }
+      # location ~* ^/css/.*\.css {
+       # root /etc/nginx/front/;
+      # }
+      # location ~* ^/js/.*\.js {
+       # root /etc/nginx/front/;
+      # }
+      # location ~* ^/static/.*\.png {
+       # root /etc/nginx/front/;
+      # }
+      # location ~* ^/css/img/.*\.jpg {
+       # root /etc/nginx/front/;
+      # }
+      # location ~* ^/css/fonts/.*\.woff {
+       # root /etc/nginx/front/;
+      # }
+      # location ~* ^/css/fonts/.*\.ttf {
+       # root /etc/nginx/front/;
+      # }
+# spec:
+  # rules:
+    # - host: gyfrontend.tclking.com
+      # http:
+        # paths:
+          # - path: /
+            # backend:
+              # serviceName: front-service
+              # servicePort: 80
