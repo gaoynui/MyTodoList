@@ -54,7 +54,7 @@ sudo vi /etc/hosts
 # windows
 C:\Windows\System32\drivers\etc
 # 在最后另起一行添加：
- my.todolists.com gy.todolists.com
+ [hostIP] my.todolists.com gy.todolists.com
 ```
 
 打开浏览器输入：
